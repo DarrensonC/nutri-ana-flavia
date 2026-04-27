@@ -28,9 +28,21 @@ export default function SobreMim({ waLink }: SobreMimProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Foto */}
           <div className="relative">
+            {/* Contorno decorativo deslocado — aparece nas pontas */}
+            <div
+              className="absolute hidden md:block"
+              style={{
+                top: "16px",
+                left: "16px",
+                right: "-16px",
+                bottom: "-16px",
+                border: "1px solid rgba(138,122,82,0.35)",
+                zIndex: 0,
+              }}
+            />
             <div
               className="relative overflow-hidden"
-              style={{ aspectRatio: "3/4" }}
+              style={{ aspectRatio: "3/4", zIndex: 1 }}
             >
               {/* Placeholder sempre visível por baixo */}
               <div
