@@ -56,11 +56,15 @@ export default function Hero({ waLink }: HeroProps) {
         </div>
       )}
 
-      {/* Película mobile */}
+      {/* Película mobile — multicamada para garantir leitura */}
+      <div
+        className="absolute inset-0 md:hidden"
+        style={{ backgroundColor: "rgba(8,10,6,0.72)", zIndex: 1 }}
+      />
       <div
         className="absolute inset-0 md:hidden"
         style={{
-          background: "linear-gradient(to bottom, rgba(10,12,8,0.55) 0%, rgba(10,12,8,0.75) 100%)",
+          background: "linear-gradient(to bottom, rgba(20,24,16,0.6) 0%, rgba(20,24,16,0.85) 100%)",
           zIndex: 1,
         }}
       />
